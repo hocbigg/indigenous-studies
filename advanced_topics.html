@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+
+  <title>Advanced Topics in Indigenous Studies</title>
+  <meta name="description" content="Advanced Topics in Indigenous Studies curriculum by hocbigg.">
+  <meta name="author" content="hocbigg">
+
+  <link rel="canonical" href="https://hocbigg.github.io/indigenous-studies/advanced_topics.html">
+  <meta property="og:title" content="Advanced Topics in Indigenous Studies">
+  <meta property="og:description" content="Advanced Topics in Indigenous Studies curriculum by hocbigg.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://hocbigg.github.io/indigenous-studies/advanced_topics.html">
+  <link rel="icon" href="https://hocbigg.github.io/images/favicon.ico">
+
+  <style>
+:root {
+  color-scheme: light dark;
+
+  --bg: #ffffff;
+  --fg: #1a1a1a;
+  --muted: #595959;
+  --border: #e0e0e0;
+  --th-bg: #f6f8fa;
+  --code-bg: #f4f4f4;
+  --link: #0969da;
+  --focus-ring: #0969da;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0d1117;
+    --fg: #e6edf3;
+    --muted: #8b949e;
+    --border: #30363d;
+    --th-bg: #161b22;
+    --code-bg: #161b22;
+    --link: #58a6ff;
+    --focus-ring: #58a6ff;
+  }
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 1.5rem auto;
+  max-width: 60rem;
+  padding: 0 1rem 3.5rem;
+  background-color: var(--bg);
+  color: var(--fg);
+  font: 1.15rem/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  
+  /* Cú pháp hiện đại thay thế cho word-wrap */
+  overflow-wrap: break-word;
+}
+
+.site-header {
+  margin-bottom: 2.5rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 1rem;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 0.5rem 1.25rem;
+  font-size: 1rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+nav a:hover, 
+nav a:focus-visible {
+  color: var(--fg);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+nav .nav-brand {
+  color: var(--fg);
+  font-weight: 700;
+  margin-right: 0.5rem;
+}
+
+.skip-link {
+  position: absolute;
+  transform: translateY(-150%);
+  left: 1rem;
+  background: var(--fg);
+  color: var(--bg);
+  padding: 0.5rem 1rem;
+  z-index: 100;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: transform 0.2s ease;
+}
+
+.skip-link:focus {
+  transform: translateY(1rem);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 3px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.3;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: var(--fg);
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-top: 0;
+}
+
+h2 {
+  font-size: 2rem;
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid var(--border);
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+}
+
+h5 {
+  font-size: 1.15rem;
+}
+
+h6 {
+  font-size: 1rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+p, ul, ol, blockquote, table {
+  margin-top: 0;
+  margin-bottom: 1.25rem;
+}
+
+li > ul,
+li > ol {
+  margin-top: 0.25rem;
+  margin-bottom: 0;
+}
+
+li {
+  margin-bottom: 0.25rem;
+}
+
+a {
+  color: var(--link);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+a:hover {
+  text-decoration-thickness: 2px;
+}
+
+a:has(img) {
+  text-decoration: none;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.page-header .page-subtitle {
+  color: var(--muted);
+  font-size: 1.15rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.page-header img {
+  margin: 0 auto 1rem;
+  display: block;
+}
+
+code {
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+  font-size: 0.875em;
+  background-color: var(--code-bg);
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+}
+
+pre {
+  background-color: var(--code-bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 1rem;
+  overflow-x: auto;
+  tab-size: 2;
+}
+
+pre code {
+  background: transparent;
+  padding: 0;
+  border: none;
+  font-size: 0.9rem;
+  border-radius: 0;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+  margin-bottom: 1.5rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+th, td {
+  border: 1px solid var(--border);
+  padding: 0.6rem 0.75rem;
+  vertical-align: top;
+}
+
+th {
+  background-color: var(--th-bg);
+  font-weight: 600;
+}
+
+blockquote {
+  margin-inline: 0;
+  border-left: 4px solid var(--border);
+  padding-left: 1rem;
+  color: var(--muted);
+  font-style: italic;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@media print {
+  body {
+    max-width: none;
+    color: #000;
+    background: #fff;
+  }
+  .skip-link, nav {
+    display: none;
+  }
+}
+  </style>
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="site-header">
+    <nav aria-label="Main Navigation">
+    <ul>
+      <li><a href="https://hocbigg.github.io/" class="nav-brand">Hocbigg</a></li>
+      <li><a href="/indigenous-studies/">Indigenous Studies</a></li>
+      <li><a href="/indigenous-studies/advanced_topics.html">Advanced Topics</a></li>
+      <li><a href="https://github.com/hocbigg/indigenous-studies" target="_blank" rel="noopener noreferrer">GitHub<span class="sr-only"> (opens in new tab)</span></a></li>
+    </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <article>
+
+<h1 id="advanced-topics-in-indigenous-studies">Advanced Topics in Indigenous Studies</h1>
+<p>Having completed the core foundational curriculum, learners can explore specialized subdisciplines within Indigenous Studies. Learners are encouraged to choose one or two tracks that align with their practical interests and goals rather than completing every topic sequentially.</p>
+<ul>
+<li><strong>Indigenous Environmental Justice and Land Defense:</strong> Examines climate adaptation, food sovereignty frameworks, just transition economics, and frontline resistance against resource extraction.</li>
+<li><strong>Indigenous Law, Governance, and Policy:</strong> Focuses on reviving traditional legal orders, practical nation-building strategies, treaty diplomacy, and international Indigenous rights frameworks.</li>
+<li><strong>Indigenous Health, Well-being, and Healing:</strong> Investigates structural and social determinants of health, culturally grounded trauma interventions, and Two-Spirit wellness paradigms.</li>
+<li><strong>Indigenous Arts, Literature, and Media Representation:</strong> Explores museum decolonization, Indigenous Futurisms, visual sovereignty in film, and ethical media production protocols.</li>
+</ul>
+<h2 id="indigenous-environmental-justice-and-land-defense">Indigenous Environmental Justice and Land Defense</h2>
+<p>This track examines how Indigenous communities leverage ancestral knowledge, international frameworks, and direct action to address environmental degradation and exercise environmental self-determination.</p>
+<p>Climate Adaptation and Traditional Ecological Knowledge: <a href="https://www.coursera.org/learn/climate-change-indigenous-communities" target="_blank" rel="noopener noreferrer">Climate change and Indigenous People and local communities (Universitat Autònoma de Barcelona / Coursera)</a> - A 5-week course analyzing how Indigenous knowledge systems monitor ecological changes, inform local adaptation strategies, and interface with global climate governance.</p>
+<p>Indigenous Food Sovereignty: <a href="https://books.google.com/books?isbn=9780806163215" target="_blank" rel="noopener noreferrer">Indigenous Food Sovereignty in the United States: Restoring Cultural Knowledge, Protecting Environments, and Regaining Health (Devon A. Mihesuah and Elizabeth Hoover, eds.)</a> - A comprehensive anthology detailing the agricultural, legal, and nutritional frameworks necessary to revitalize traditional foodways and reclaim community food systems.</p>
+<p>Just Transition and Anti-Extractivism: <a href="https://www.ienearth.org/justtransition/" target="_blank" rel="noopener noreferrer">Indigenous Principles of Just Transition (Indigenous Environmental Network)</a> - An applied policy framework articulating the standards required to move away from fossil economies without replicating colonial resource extraction on Indigenous lands.</p>
+<p>Resource Extraction and Water Defense: <a href="https://books.google.com/books?isbn=9781804295502" target="_blank" rel="noopener noreferrer">Our History Is the Future: Standing Rock Versus the Dakota Access Pipeline, and the Long Tradition of Indigenous Resistance (Nick Estes)</a> - A historical and political study tracing two centuries of Oceti Sakowin resistance to demonstrate how modern anti-pipeline movements express enduring traditions of Indigenous internationalism and water defense.</p>
+<h2 id="indigenous-law-governance-and-policy">Indigenous Law, Governance, and Policy</h2>
+<p>This track focuses on the revitalization of Indigenous legal systems, constitutional reform for Native nations, historical treaty relationships, and the application of international rights doctrines.</p>
+<p>Indigenous Legal Traditions and Methodologies: <a href="https://dspace.library.uvic.ca/handle/1828/12639" target="_blank" rel="noopener noreferrer">Gender Inside Indigenous Law Toolkit (Indigenous Law Research Unit / University of Victoria)</a> - A step-by-step open-access methodological guide showing legal researchers how to identify, analyze, and implement substantive legal principles embedded within Indigenous stories and oral traditions.</p>
+<p>Native Nation Building and Constitutional Design: <a href="https://books.google.com/books?isbn=9780816524235" target="_blank" rel="noopener noreferrer">Rebuilding Native Nations: Strategies for Governance and Development (Miriam Jorgensen, ed.)</a> - An empirical, research-backed manual outlining the constitutional, judicial, and administrative reforms Native nations implement to achieve sustained economic development and genuine self-rule.</p>
+<p>Treaty Diplomacy and Historical Jurisprudence: <a href="https://books.google.com/books?isbn=9780415925778" target="_blank" rel="noopener noreferrer">Linking Arms Together: American Indian Treaty Visions of Law and Peace, 1600–1800 (Robert A. Williams Jr.)</a> - An analysis of North American encounter-era treaties that reconstructs Indigenous concepts of law, peace, and mutual obligation that continue to govern modern legal interpretation.</p>
+<p>International Indigenous Rights Frameworks: <a href="https://books.google.com/books?isbn=9780195173505" target="_blank" rel="noopener noreferrer">Indigenous Peoples in International Law (S. James Anaya)</a> - An authoritative treatise examining the shift of international human rights law toward recognizing collective Indigenous rights, self-determination, and the mechanisms surrounding the UN Declaration on the Rights of Indigenous Peoples.</p>
+<h2 id="indigenous-health-well-being-and-healing">Indigenous Health, Well-being, and Healing</h2>
+<p>This track explores the structural causes of Indigenous health disparities, clinical and communal trauma recovery models, and the restoration of traditional systems of care and gender identity.</p>
+<p>Structural Determinants of Indigenous Health: <a href="https://openlibrary-repo.ecampusontario.ca/jspui/handle/123456789/988" target="_blank" rel="noopener noreferrer">Northern and Indigenous Health and Healthcare (Heather Exner-Pirot, Bente Norbye, and Lorna Butler, eds. / eCampusOntario)</a> - An open-access peer-reviewed textbook addressing the geographical, political, and institutional factors that influence healthcare delivery, community health systems, and cultural safety across Indigenous communities.</p>
+<p>Clinical Trauma and Cross-Cultural Counseling: <a href="https://books.google.com/books?isbn=9780807761397" target="_blank" rel="noopener noreferrer">Healing the Soul Wound: Trauma-Informed Counseling for Indigenous Communities (Eduardo Duran)</a> - A clinical manual integrating traditional Native spiritual paradigms with contemporary psychotherapy to address intergenerational historical trauma, substance abuse, and veteran care.</p>
+<p>Transgenerational Trauma and Communal Healing: <a href="https://books.google.com/books?isbn=9781876756222" target="_blank" rel="noopener noreferrer">Trauma Trails, Recreating Song Lines: The Transgenerational Effects of Trauma in Indigenous Australia (Judy Atkinson)</a> - An influential study establishing culturally grounded healing methodologies and relational deep listening (<em>Dadirri</em>) to resolve transgenerational cycles of colonial harm.</p>
+<p>Two-Spirit and Queer Indigenous Wellness: <a href="https://books.google.com/books?isbn=9780816530489" target="_blank" rel="noopener noreferrer">Asegi Stories: Cherokee Queer and Two-Spirit Memory (Qwo-Li Driskill)</a> - A foundational monograph that develops a tribally specific Two-Spirit critique, exploring how the reclamation of non-binary gender identities and sexualities directly fosters decolonial healing.</p>
+<h2 id="indigenous-arts-literature-and-media-representation">Indigenous Arts, Literature, and Media Representation</h2>
+<p>This track investigates visual sovereignty, the reclamation of cultural patrimony from colonial institutions, speculative literature, and the protocols governing Indigenous storytelling in cinema.</p>
+<p>Museum Decolonization and Cultural Patrimony: <a href="https://books.google.com/books?isbn=9780807837153" target="_blank" rel="noopener noreferrer">Decolonizing Museums: Representing Native America in National and Tribal Museums (Amy Lonetree)</a> - A critical study that analyzes how tribal and national museums negotiate exhibition spaces, address unresolved historical trauma, and conduct the repatriation of sacred objects.</p>
+<p>Indigenous Futurisms and Speculative Fiction: <a href="https://books.google.com/books?isbn=9780816529827" target="_blank" rel="noopener noreferrer">Walking the Clouds: An Anthology of Indigenous Science Fiction (Grace L. Dillon, ed.)</a> - The canonical reader establishing the subdiscipline of Indigenous Futurisms, illustrating how Indigenous authors repurpose science fiction and speculative tropes to assert cultural continuity and envision sovereign futures.</p>
+<p>Visual Sovereignty and Film Analysis: <a href="https://books.google.com/books?isbn=9780803268272" target="_blank" rel="noopener noreferrer">Reservation Reelism: Redfacing, Visual Sovereignty, and Representations of Native Americans in Film (Michelle H. Raheja)</a> - A foundational film and media studies text that articulates the theory of visual sovereignty, evaluating how Indigenous filmmakers and actors challenge stereotypical depictions and assert agency on screen.</p>
+<p>Screen Protocols and Ethical Media Production: <a href="https://iso-bea.ca/download/on-screen-protocols-pathways/" target="_blank" rel="noopener noreferrer">On-Screen Protocols &amp; Pathways: A Media Production Guide (imagineNATIVE)</a> - A practical professional standard developed for filmmakers and cultural institutions, outlining ethical requirements, collaborative models, and intellectual property protections when producing Indigenous screen content.</p>
+    </article>
+  </main>
+
+</body>
+</html>
